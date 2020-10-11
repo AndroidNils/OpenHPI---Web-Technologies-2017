@@ -1,0 +1,327 @@
+/* Sonstiges */
+
+.bg {
+    background-color: #cccccc;
+}
+
+.border {
+    border-bottom: 5px solid black;
+}
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+p,
+.articels h2,
+.articels label {
+    padding-left: 20px;
+}
+
+h1,
+h2 {
+    margin-bottom: 0;
+}
+
+label {
+    margin-bottom: 10px;
+}
+
+
+/* Links */
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* Schriftart */
+
+.font,
+a,
+h1,
+h2,
+p,
+label,
+textarea {
+    font-family: "Verdana", sans-serif;
+    color: black;
+}
+
+
+/* Header */
+
+header {
+    position: relative;
+    background-image: url(images/hpi_at_night.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 380px;
+    position: relative
+}
+
+/* header img {
+    width: 100%;
+    height: auto;
+    position: relative;
+} */
+
+header h1 {
+    margin-top: 280px;
+    border-top: 100px;
+    padding: 1%;
+    font-size: 150%;
+    display: inline-block;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.75);
+}
+
+
+/* Navigation */
+
+nav {
+    position: inherit;
+    display: inline-block;
+    width: 200px;
+    vertical-align: top;
+}
+
+nav li {
+    list-style: none;
+    background-color: #cccccc;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+nav .active::before {
+    content: "» ";
+}
+
+nav .active {
+    background-color: white;
+    border: 3px solid #cccccc;
+}
+
+nav ul {
+    padding: 0 10px;
+    margin: 0;
+}
+
+/* Artikel */
+
+article {
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.articels p {
+    font-size: 12px;
+    padding-right: 10px;
+}
+.articels {
+    width: 900px;
+}
+
+article input {
+    display: block;
+}
+
+.articels {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.read-more-state {
+    display: none;
+}
+
+.read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+
+.read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+
+.read-more-state ~ .read-more-trigger:before {
+    content: '» mehr lesen';
+    font-weight: bolder;
+}
+
+.read-more-state:checked ~ .read-more-trigger:before {
+    content: '» weniger lesen';
+    font-weight: bolder;
+}
+
+.read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 .5em;
+    font-size: .9em;
+    line-height: 2;
+}
+
+
+/* Kontakt */
+
+.contact {
+    margin-right: 20px;
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
+}
+
+.contact label {
+    padding-left: 10px;
+}
+
+.contact h2 {
+    margin-left: 10px;
+}
+
+textarea,
+input,
+.contact button {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	width: 90%;
+    max-width: 90%;
+    height: 181px;
+}
+
+.contact button {
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1750px) {
+    header {
+        height: 360px;
+    }
+    header h1 {
+        margin-top: 17%;
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    header {
+        height: 340px;
+    }
+    header h1 {
+        margin-top: 15%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    header {
+        height: 300px;
+    }
+    header h1 {
+        margin-top: 13%;
+        margin-left: 20px;
+    }
+    .articels {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    header {
+        height: 260px;
+    }
+    header h1 {
+        margin-top: 13%;
+        margin-left: 20px;
+    }
+    nav {
+        display: inline;
+    }
+    .articels {
+        margin-top: 20px;
+        width: 98%;
+        display: block;
+    }
+    .contact {
+        margin-right: 20px;
+        float: none; 
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    .contact h2 {
+        padding-top: 10px;
+    }
+    .contact textarea {
+        width: 98%;
+        max-width: 98%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    header {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    header {
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        height: 150px;
+    }
+    header h1 {
+        margin-top: 11%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header {
+        height: 100px;
+    }
+    header h1 {
+        margin-top: 9%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        height: 90px;
+    }
+    header h1 {
+        margin-top: 9%;
+        font-size: 100%;
+    }
+    .articels {
+        margin-right: 5px;
+    }
+}
